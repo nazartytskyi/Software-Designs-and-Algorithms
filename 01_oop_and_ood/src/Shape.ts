@@ -30,7 +30,7 @@ export abstract class Shape {
     }. Points: ${points.join(", ")}.`;
   }
 
-  getPerimeter() {
+  getPerimeter(): number {
     return this.points.reduce((acc: number, point: Point, i: number) => {
       const index = i ? i : this.points.length;
 

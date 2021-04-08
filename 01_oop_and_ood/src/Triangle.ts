@@ -35,13 +35,13 @@ export class Triangle extends Shape {
         })
     }
 
-    private isEquilateral() {
+    private isEquilateral(): boolean {
         const sideLengths = this.getSidesLengths();
 
         return sideLengths.every(length => length === sideLengths[0]);
     }
 
-    private isIsosceles() {
+    private isIsosceles(): boolean {
         const sideLengths = this.getSidesLengths();
 
         return sideLengths[0] === sideLengths[1] || sideLengths[0] === sideLengths[2] || sideLengths[1] === sideLengths[2];

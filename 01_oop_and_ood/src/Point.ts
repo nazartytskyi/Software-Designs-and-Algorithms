@@ -19,12 +19,12 @@ export class Point {
   distance(x: number, y: number): number;
 
   distance(...args: any[]): number {
-    switch (args.length) {
-      case 0:
+    switch (typeof args[0]) {
+      case "undefined":
         return this.distanceTo(0, 0);
-      case 1:
+      case "object":
         return this.distanceTo(args[0].x, args[0].y);
-      case 2:
+      case "number":
         return this.distanceTo(args[0], args[1]);
     }
   }
