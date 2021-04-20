@@ -3,10 +3,10 @@ import { Item } from "./Item";
 export abstract class Weapon extends Item {
   static MODIFIER_CHANGE_RATE: number = 0.05;
 
-  private baseDamage: number;
-  private damageModifier: number;
-  private baseDurability: number;
-  private durabilityModifier: number;
+  private baseDamage: number = 0;
+  private damageModifier: number = 0;
+  private baseDurability: number = 0;
+  private durabilityModifier: number = 0;
 
   constructor(
     name: string,
