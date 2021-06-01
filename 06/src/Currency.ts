@@ -34,12 +34,10 @@ export class Currency {
   }
 
   to(to: string): number {
-    const a = ExchangeService.getInstance().exchange(
+    return ExchangeService.getInstance().exchange(
       this.nameShort,
       to,
       this.value
     );
-
-    return a;
   }
 }
